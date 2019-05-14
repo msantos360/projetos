@@ -50,6 +50,17 @@ insert into clientes (cpf,nome,telefone,carro_fk)
 insert into clientes (cpf,nome,telefone,carro_fk)
   values (06985695894,'CRISTIANE SANCHES SOUZA',11982554422,1);
 
+INSERT NA TABELA DE SERVICOS
+insert into servicos(descricao,preco) values ('SERVICO DE INJESAO',100);
+insert into servicos(descricao,preco) values ('SERVICO DE TAPECARIA',150);
+insert into servicos(descricao,preco) values ('SERVICO DE TRANSMISSAO',400);
+insert into servicos(descricao,preco) values ('SERVICO DE SUSPENSAO',120);
+insert into servicos(descricao,preco) values ('SERVICO DE ALINHAMENTO',70);
+insert into servicos(descricao,preco) values ('SERVICO DE BALANCEAMENTO',50);
+insert into servicos(descricao,preco) values ('SERVICO DE REFRIGERAÇÃO',130);
+insert into servicos(descricao,preco) values ('SERVICO DE TROCA DE OLEO',40);
+insert into servicos(descricao,preco) values ('SERVICO DE ELETRICA',75);
+
 //INSERT NA TABELA DE PECAS
 insert into pecas (codigo_peca, descricao, preco) values(3652,'BICO INJETOR CELTA',105.69);
 insert into pecas (codigo_peca, descricao, preco) values(3699,'BICO INJETOR PALIO',113.12);
