@@ -25,6 +25,12 @@ create table pecas(
   preco double not null
 );
 
+create table itens_os(
+  id int auto_increment primary key,
+  codigo_peca_fk int not null,
+  codigo_os_fk int not null
+);
+
 create table clientes(
  codigo_cliente_pk int auto_increment primary key,
  cpf bigint(11) not null unique,
