@@ -20,3 +20,12 @@ data_vencimento as VENCIMENTO, carro_cliente as CARRO
 from os
 where data_vencimento-data_emissao > 3
 order by data_vencimento desc;
+
+
+//select 'os' com respectivas mao de obra
+select os.codigo_os_pk as CODIGO_OS, os.carro_cliente as CARRO, os.cliente_fk as CLIENTE,
+m.codigo_servico_fk as CODIGO_SERVICO, se.descricao as SERVICO, se.preco as SUB_TOTAL
+from os
+inner join mao_de_obra as m on m.codigo_os_fk = os.codigo_os_pk
+inner join servicos as se on se.codigo_servico_pk = m.codigo_servico_fk
+order by os.carro_cliente asc;
