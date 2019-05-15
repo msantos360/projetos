@@ -30,7 +30,14 @@ insert into mecanicos (cpf, nome, endereco, especialidade)
 insert into mecanicos (cpf, nome, endereco, especialidade)
   values(95362154264,'FLAVIA SANTOS SOUSA','RUA CAPITAO ASSIS','INJESAO ELETRONICA');
 
-  //INSERT NA TABELA DE OS
+//INSERT NA TABELA MAO_DE_OBRA
+insert into mao_de_obra(codigo_os_fk,codigo_servico_fk,cpf_cliente)
+  values(1,1,36985695844);
+insert into mao_de_obra(codigo_os_fk,codigo_servico_fk,cpf_cliente)
+  values(1,9,36985695844);
+
+
+//INSERT NA TABELA DE OS
 insert into os(data_emissao,data_vencimento,mecanico_fk,cliente_fk)
   values('2019-05-14','2019-05-20',36956987422,36985695844);
 insert into os(data_emissao,data_vencimento,mecanico_fk,cliente_fk)
