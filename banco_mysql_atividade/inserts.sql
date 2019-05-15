@@ -35,6 +35,22 @@ insert into mao_de_obra(codigo_os_fk,codigo_servico_fk,cpf_cliente)
   values(1,1,36985695844);
 insert into mao_de_obra(codigo_os_fk,codigo_servico_fk,cpf_cliente)
   values(1,9,36985695844);
+insert into mao_de_obra(codigo_os_fk,codigo_servico_fk,cpf_cliente)
+  values(2,4,14587595556);
+insert into mao_de_obra(codigo_os_fk,codigo_servico_fk,cpf_cliente)
+  values(2,5,14587595556);
+insert into mao_de_obra(codigo_os_fk,codigo_servico_fk,cpf_cliente)
+  values(2,6,14587595556);
+
+
+//INSERT NA TABELA ITENS OS
+insert into itens_os(codigo_peca_fk,codigo_os_fk) values(3652,1);
+insert into itens_os(codigo_peca_fk,codigo_os_fk) values(9533,1);
+
+insert into itens_os(codigo_peca_fk,codigo_os_fk) values(1281,2);
+insert into itens_os(codigo_peca_fk,codigo_os_fk) values(1283,2);
+insert into itens_os(codigo_peca_fk,codigo_os_fk) values(1292,2);
+
 
 
 //INSERT NA TABELA DE OS
