@@ -13,6 +13,18 @@ update veiculos set cliente_fk = 36985095804 where codigo=10;
 //Atualização da tabela veiculos na coluna cliente_fk para not null
 alter table veiculos modify column cliente_fk bigint(11) not null;
 
-//Construindo chave estrangeira Tabela veiculos e clientes
-ALTER TABLE clientes
-ADD FOREIGN KEY (cpf) REFERENCES veiculos(cliente_fk);
+//acrescentando coluna carro a tabela os
+alter table os add column carro_cliente varchar(7);
+
+//inserindo carros a os
+//parei aqui = tem que completar a tabela com o carro do cliente correspondente
+update os set carro_cliente = 'ZLY3664' where cliente_fk=85875695844;
+update os set carro_cliente = 'ADI8265' where cliente_fk=14587595556;
+update os set carro_cliente = 'TNY2657' where cliente_fk=36986958548;
+update os set carro_cliente = '' where cliente_fk=;
+update os set carro_cliente = '' where cliente_fk=;
+update os set carro_cliente = '' where cliente_fk=;
+update os set carro_cliente = '' where cliente_fk=;
+update os set carro_cliente = '' where cliente_fk=;
+update os set carro_cliente = '' where cliente_fk=;
+update os set carro_cliente = '' where cliente_fk=;
