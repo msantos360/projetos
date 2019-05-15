@@ -1,14 +1,17 @@
 //INSERT NA TABELA DE VEICULOS
-insert into veiculos (placa, descricao) values ('EDY1652','CELTA');
-insert into veiculos (placa, descricao) values ('ADI8265','PALIO');
-insert into veiculos (placa, descricao) values ('TNY2657','GOLF');
-insert into veiculos (placa, descricao) values ('CDY3668','C3');
-insert into veiculos (placa, descricao) values ('FMY3661','HR-V');
-insert into veiculos (placa, descricao) values ('YXY3663','C4 CACTUS');
-insert into veiculos (placa, descricao) values ('ZLY3664','PAJERO');
-insert into veiculos (placa, descricao) values ('ARY3668','CORSA');
-insert into veiculos (placa, descricao) values ('BOY3666','GOL G5');
-insert into veiculos (placa, descricao) values ('JUY3665','FIESTA');
+insert into veiculos (placa, descricao,cliente_fk) values ('EDY1652','CELTA',36985695844);
+insert into veiculos (placa, descricao,cliente_fk) values ('ADI8265','PALIO',14587595556);
+insert into veiculos (placa, descricao,cliente_fk) values ('TNY2657','GOLF',36986958548);
+insert into veiculos (placa, descricao,cliente_fk) values ('CDY3668','C3'),36985847855;
+insert into veiculos (placa, descricao,cliente_fk) values ('FMY3661','HR-V',69585695844);
+insert into veiculos (placa, descricao,cliente_fk) values ('YXY3663','C4 CACTUS',36585695844);
+insert into veiculos (placa, descricao,cliente_fk) values ('ZLY3664','PAJERO',85875695844);
+insert into veiculos (placa, descricao,cliente_fk) values ('ARY3668','CORSA',44485695874);
+insert into veiculos (placa, descricao,cliente_fk) values ('BOY3666','GOL G5',36985095804);
+insert into veiculos (placa, descricao,cliente_fk) values ('JUY3665','FIESTA',06985695894);
+insert into veiculos (placa, descricao,cliente_fk) values ('CAT3006','VECTRA',36985847855);
+insert into veiculos (placa, descricao,cliente_fk) values ('CUD4600','FUSCA',36986958548);
+
 
 //INSERT NA TABELA DE MECANICOS
 insert into mecanicos (cpf, nome, endereco, especialidade)

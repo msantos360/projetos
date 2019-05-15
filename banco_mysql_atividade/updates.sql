@@ -9,3 +9,10 @@ update veiculos set cliente_fk = 85875695844 where codigo=7;
 update veiculos set cliente_fk = 36285695877 where codigo=8;
 update veiculos set cliente_fk = 44485695874 where codigo=9;
 update veiculos set cliente_fk = 36985095804 where codigo=10;
+
+//Atualização da tabela veiculos na coluna cliente_fk para not null
+alter table veiculos modify column cliente_fk bigint(11) not null;
+
+//Construindo chave estrangeira Tabela veiculos e clientes
+ALTER TABLE clientes
+ADD FOREIGN KEY (cpf) REFERENCES veiculos(cliente_fk);

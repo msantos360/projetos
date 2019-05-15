@@ -6,7 +6,8 @@ create database mecanica;
 create table veiculos(
   codigo int auto_increment primary key,
   placa varchar(7) not null,
-  descricao varchar(255)
+  descricao varchar(255),
+  cliente_fk bigint(11)
 );
 
 create table mecanicos(
@@ -28,8 +29,7 @@ create table clientes(
  codigo_cliente_pk int auto_increment primary key,
  cpf bigint(11) not null unique,
  nome varchar(255) not null,
- telefone varchar(11),
- carro_fk int
+ telefone varchar(11)
 );
 
 create table os(
