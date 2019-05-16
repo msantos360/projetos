@@ -10,23 +10,50 @@ public class TestaConta {
 		LocalDate dataAtual = LocalDate.now();
 
 		Banco itau = new Banco("Itau", 1025);
-		Conta contaJoao = new Conta(itau, 25695, dataAtual);
-		Cliente joao = new Cliente("João", (long) 415992584, contaJoao);
+		ContaCorrente contaCorrenteJoao = new ContaCorrente(itau, 15698, dataAtual, "corrente");
+		Poupanca contaPoupancaJoao = new Poupanca(itau, 32154, dataAtual, "poupanca");
+
+		ContaCorrente contaCorrenteMaria = new ContaCorrente(itau, 15874, dataAtual, "corrente");
+		Poupanca contaPoupancaMaria = new Poupanca(itau, 365245, dataAtual, "poupanca");
+
+		Cliente joao = new Cliente("João", (long) 415992584, contaCorrenteJoao);
+		Cliente maria = new Cliente("Maria", (long) 45528745, contaCorrenteMaria);
+
+		// Depósitos e saques
+		System.out.println("Depósitos e saques cliente [conta corrente]" + maria.getNome());
+		contaCorrenteMaria.deposita(575.63);
+		contaCorrenteMaria.saca(230);
+		contaCorrenteMaria.saldoAtual();
 		
-		contaJoao.deposita(1000.0);		
-		System.out.println("Cliente "+joao.getNome()+" saldo atual R$" + contaJoao.saldoAtual());		
-		contaJoao.saca(170.0);		
-		System.out.println("Cliente "+joao.getNome()+" saldo atual R$" + contaJoao.saldoAtual());
+		System.out.println();
+		System.out.println("Depósitos e saques cliente [conta poupança]" + maria.getNome());
+		contaPoupancaMaria.deposita(150);
+		contaPoupancaMaria.saca(50);
+		contaPoupancaMaria.saldoAtual();
 		
-		Banco santander = new Banco("Santander", 4698);
-		Conta contaMaria = new Conta(santander, 25874, dataAtual);
-		Cliente maria = new Cliente(" Maria das Dores", (long) 6985475, contaMaria);
+		System.out.println();
+		System.out.println("Depósitos e saques cliente [conta corrente]" + joao.getNome());
+		contaCorrenteJoao.deposita(2226.63);
+		contaCorrenteJoao.saca(367.67);
+		contaCorrenteJoao.saldoAtual();
 		
-		contaMaria.deposita(2500.70);
-		contaMaria.deposita(3000.30);
-		System.out.println("Cliente "+maria.getNome()+" saldo atual R$" + contaMaria.saldoAtual());
-		contaMaria.saca(750);
-		System.out.println("Cliente "+maria.getNome()+" saldo atual R$" + contaMaria.saldoAtual());
+		System.out.println();
+		System.out.println("Depósitos e saques cliente [conta poupança]" + joao.getNome());
+		contaPoupancaJoao.deposita(1258);
+		contaPoupancaJoao.saca(25);
+		contaPoupancaJoao.saldoAtual();
+
+		// Transferencia
+		System.out.println();
+		System.out.println("Transação - transferência");
+		System.out.println("Cliente: " + joao.getNome());
+
+		Double valorTransferidoPoupanca = contaCorrenteJoao.transfere(100, contaPoupancaMaria);
+
+		System.out.println("Cliente: " + maria.getNome());
+		contaPoupancaMaria.recebeTransferencia(valorTransferidoPoupanca);
+		contaPoupancaMaria.saldoAtual();
+
 	}
 
 }

@@ -2,38 +2,25 @@ package br.com.michael.banco;
 
 import java.time.LocalDate;
 
-public class Conta {
+public abstract class Conta {
 
 	private Banco banco;
 	private Integer conta;
 	private LocalDate dataCriacao;
-	private double saldo;
+	protected double saldo;
+	private String tipoConta;
 
-	public Conta() {
-	}
+	public Conta() {}
 
-	public Conta(Banco banco, Integer conta, LocalDate dataCriacao) {
+	public Conta(Banco banco, Integer conta, LocalDate dataCriacao, String tipoConta) {
 		this.banco = banco;
 		this.conta = conta;
 		this.dataCriacao = dataCriacao;
+		this.tipoConta = tipoConta;
 	}
 
-	public Boolean saca(double valor) {
-
-		if (getSaldo() >= valor) {
-			this.saldo -= valor;
-			return true;
-		}
-		System.out.println("Saldo insuficiente");
-		return false;
-	}
-
-	public void deposita(double valor) {
-		this.saldo += valor;
-	}
-
-	public double saldoAtual() {
-		return getSaldo();
+	public String getTipoConta() {
+		return tipoConta;
 	}
 
 	public Banco getBanco() {
